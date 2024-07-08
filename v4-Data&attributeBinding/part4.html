@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vue4</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body>
+<header>
+    <h2>Bangla tutorials</h2>
+</header>
+<div id="app">
+   <h3>Welcome to {{tutorialinfo.name}} for fresher</h3>
+   <p>
+    Get the source code at <br>
+     <!-- <a href="{{tutorialinfo.github}}">Github</a> it is not working need buinding -->
+    <!-- <a v-bind:href="tutorialinfo.github">Github</a> -->
+    <a :href="tutorialinfo.github">Github</a><br>
+    <a :href="tutorialinfo.link">Youtube</a>
+   </p>
+    <hr>
+    <!-- {{htmlcode}} html soho code pabo-->
+    <p v-html="htmlcode"></p>
+
+</div>
+<script src="app.js"></script>
+</body>
+</html>

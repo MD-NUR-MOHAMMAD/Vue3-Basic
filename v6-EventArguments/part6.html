@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vue6</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body>
+<header>
+    <h2>Bangla tutorials</h2>
+</header>
+<div id="app">
+   <!-- <h2>Time: {{getCurretntTime()}}</h2> -->
+   <h2>Time: {{getCurretntTime()}}</h2>
+   <h1>Count: {{count}}</h1>
+   <button @click="increase($event, 5)">Increase5</button> 
+   <button @click="increase(10)">Increase10</button> 
+   <br>
+   <button @click="decrease(5)">Decrease5</button>
+   <button @click="decrease(10)">Decrease10</button>
+
+   <hr>
+   <!-- <button @click="reset">Reset</button> -->
+   <button @click="reset($event)">Reset</button>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
