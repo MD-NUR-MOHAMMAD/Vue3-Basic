@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>vue3</title>
+  </head>
+  <body>
+    <script>
+              // console.log(window);
+              // alert(window.innerWidt h);
+              function start() {
+                  console.log('startsssssssssss');
+              }
+              function process(callback) {
+                setTimeout(function() {
+                   console.log('processsssssssssssss');
+                   callback();
+               }, 1000);
+            }
+
+
+
+              function finish() {
+                  console.log('finishhhhhhhhhhhhh');
+              }
+              //call the upper function
+              start();
+              process(function() {
+                finish();
+              });
+            //   finish();
+    </script>
+  </body>
+</html>
