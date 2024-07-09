@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>vue11</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  </head>
+
+  <body>
+    <header>
+      <h2>Bangla tutorials</h2>
+    </header>
+    <div id="app">
+      <h3>Skills for a Job</h3>
+      <label for="name">Skill name :</label>
+      <input id="name" type="text" v-model="newSkill.name" /><br />
+      <label for="experience">Experience in years :</label>
+      <input id="experience" type="text" v-model="newSkill.experience" /><br />
+      <label for="education">Education :</label>
+      <input id="education" type="text" v-model="newSkill.education" /><br />
+      <label for="institution">Institution :</label>
+      <input id="institution" type="text" v-model="newSkill.institution" /><br />
+      <label for="languange">Language :</label>
+      <input id="languange" type="text" v-model="newSkill.languange" /><br>
+
+      <button @click="addSkill">Add Skill</button>
+
+      <ul>
+        <li v-for="(skill, i) in skills" @click="removeSkill(i)">
+          {{ i + 1 }}. {{ skill.name }} - ({{ skill.experience }}) - {{ skill.education }} - {{ skill.institution }} - {{ skill.languange }}
+        </li>
+      </ul>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
