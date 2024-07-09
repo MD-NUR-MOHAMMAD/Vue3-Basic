@@ -21,6 +21,10 @@ var app = Vue.createApp({
     reset(){
       this.name = "";
       this.result = "";
+    },
+
+    addTen(){
+      this.result = this.name + 10;
     }
 
   },

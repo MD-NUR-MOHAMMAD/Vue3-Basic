@@ -13,11 +13,12 @@
     </header>
     <div id="app">
       <h3>Enter a number</h3>
-      <input v-model="name" type="text" >
+      <input v-model.number="name" type="text" >
       <br>
       <button @click="handleGetDouble">Get Duble</button>
       <button @click="handleGetSquare">Get Square</button>
       <button @click="reset">Reset</button>
+      <button @click="addTen">AddTen</button>
       <hr>
       <label for="">Entered Number:</label> {{name}}
       <br>
