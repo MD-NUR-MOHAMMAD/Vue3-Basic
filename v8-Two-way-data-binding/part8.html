@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>vue7</title>
+    <title>vue8</title>
     <link rel="stylesheet" href="style.css" />
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
   </head>
@@ -12,17 +12,17 @@
       <h2>Bangla tutorials</h2>
     </header>
     <div id="app">
-      <form action="" @submit.prevent="handleFormSubmit">
-        <h3>Enter your name</h3>
-        <input type="text" @keyup="handleKeyup" />
-        <p>welcome {{name}}</p>
-        <button type="submit">OK</button>
-      </form>
-      <hr />
-      <br />
-      <div class="card" @click="handlecardClick">
-        <button @click.stop="handleviewClick">View</button>
-      </div>
+      <h3>Enter a number</h3>
+      <input v-model="name" type="text" >
+      <br>
+      <button @click="handleGetDouble">Get Duble</button>
+      <button @click="handleGetSquare">Get Square</button>
+      <button @click="reset">Reset</button>
+      <hr>
+      <label for="">Entered Number:</label> {{name}}
+      <br>
+      <label for="">Result:</label> {{result}}
+
     </div>
     <script src="app.js"></script>
   </body>
