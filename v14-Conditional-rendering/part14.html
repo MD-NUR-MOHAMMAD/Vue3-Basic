@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>vue14</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  </head>
+
+  <body>
+    <header>
+      <h2>Bangla tutorials</h2>
+    </header>
+    <div id="app">
+      <button @click="toggle">Show / Hide</button>
+      <div class="card" v-show="show"></div>
+      <br>
+      <hr>
+      <br>
+
+      <ul>
+        <li v-for="(skill, i) in skills"  :key="skill.name">
+          <p>
+            {{ i + 1 }}. {{ skill.name }} -
+            <span v-if="skill.experience < 4"> Beginner</span>
+            <span v-else-if="skill.experience <= 10"> Intermediate</span>
+            <span v-else> Advanced</span>
+            
+          </p>
+        </li>
+      </ul>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
