@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>vue15</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  </head>
+
+  <body>
+    <header>
+      <h2>Bangla tutorials</h2>
+    </header>
+    <div id="app">
+      <input type="text" placeholder="Your review here" v-model="review">
+
+
+      <h3>Skills</h3>
+      <ul>
+        <li v-for="(skill, i) in skills" 
+        :key="skill.name" 
+        @click="removeSkill(i)">
+          <p>
+            {{ skill.name }} - {{ skill.experience }}
+          </p>
+        </li>
+      </ul>
+
+      <h3>Total : {{ totalCount2 }}</h3>
+
+      <h3>Experience Skills</h3>
+      <ul>
+        <li v-for="(skill, i) in experienceSkills" 
+        :key="skill.name" 
+        @click="removeSkill(i)">
+          <p>
+            {{ skill.name }} - {{ skill.experience }}
+          </p>
+        </li>
+      </ul>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
