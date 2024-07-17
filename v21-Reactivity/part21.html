@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>vue21</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script> -->
+  </head>
+
+  <body>
+    <header>
+      <h2>Bangla tutorials</h2>
+    </header>
+
+    <div id="app">
+      <h1>Enter your name</h1>
+      <label for="name">Name : </label>
+      <input id="name" type="text" v-model="name">
+      <br>
+      <button @click="clear">Clear</button>
+      <br>
+
+      <p>Your name is : <span id="outputname"></span></p>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
